@@ -39,13 +39,13 @@ We train/test our method on 4 types of the rooms (bedroom, bathroom, office, liv
 An example train command for __bedroom__ category prediction is
 
 ```
-python main.py --name JOB_NAME --train_cat --room_type bedroom --num_train_rooms 5000 --num_test_rooms 500
+python main.py --name YOUR_TRAIN_JOB_NAME --train_cat --room_type bedroom --num_train_rooms 5000 --num_test_rooms 500
 ```
 
 An example evaluate command for __bedroom__ category prediction is
 
 ```
-python main.py --test --name JOB_NAME --train_cat --room_type bedroom --num_train_rooms 5000 --num_test_rooms 500
+python main.py --test --load_model_name YOUR_TRAIN_JOB_NAME --name YOUR_TEST_JOB_NAME --train_cat --room_type bedroom --num_train_rooms 5000 --num_test_rooms 500
 ```
 
 Some variants and hyper-params could be tuned by adding additional argument parsers. See the help in `main.py` for details.
